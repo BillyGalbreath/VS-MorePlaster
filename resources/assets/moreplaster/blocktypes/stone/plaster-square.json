@@ -1,5 +1,5 @@
 ﻿{
-  "code": "plaster",
+  "code": "plaster-square",
   "class": "Block",
   "variantgroups": [
     { "code": "material", "states": ["acacia", "baldcypress", "birch", "ebony", "kapok", "larch", "maple", "oak", "pine", "purpleheart", "redwood", "walnut"] }
