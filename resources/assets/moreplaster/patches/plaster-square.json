@@ -1,0 +1,19 @@
+﻿[
+  {
+    "op": "add",
+    "side": "server",
+    "file": "game:blocktypes/stone/plaster-plain.json",
+    "path": "/behaviorsByType",
+    "value": {
+      "*-square": [
+        {
+          "name": "MorePlaster.BlockName",
+          "properties": {
+            "name": "block-plaster-square",
+            "material": "material-aged"
+          }
+        }
+      ]
+    }
+  }
+]

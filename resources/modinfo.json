@@ -1,0 +1,13 @@
+{
+  "type": "code",
+  "name": "More Plaster",
+  "modid": "moreplaster",
+  "version": "1.0.0",
+  "description": "Adds more plaster types based on the vanilla wood types",
+  "website": "https://github.com/BillyGalbreath/VS-MorePlaster",
+  "authors": [ "BillyGalbreath" ],
+  "side": "Universal",
+  "dependencies": {
+    "game": "1.18.8"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "ingredientPattern": "W___P___W",
+  "ingredients": {
+    "W": {
+      "type": "item",
+      "code": "game:plank-*",
+      "name": "material",
+      "skipVariants": [
+        "aged"
+      ]
+    },
+    "P": {
+      "type": "block",
+      "code": "game:plaster-plain"
+    }
+  },
+  "width": 3,
+  "height": 3,
+  "output": {
+    "type": "block",
+    "code": "plaster-diagonal-{material}-ud"
+  }
+}
