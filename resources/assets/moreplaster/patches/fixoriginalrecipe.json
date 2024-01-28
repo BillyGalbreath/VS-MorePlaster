@@ -1,0 +1,23 @@
+﻿[
+  {
+    "op": "replace",
+    "side": "server",
+    "file": "game:recipes/grid/plaster/diagonal.json",
+    "path": "/ingredients/W/code",
+    "value": "plank-aged"
+  },
+  {
+    "op": "replace",
+    "side": "server",
+    "file": "game:recipes/grid/plaster/square.json",
+    "path": "/ingredients/W/code",
+    "value": "plank-aged"
+  },
+  {
+    "op": "replace",
+    "side": "server",
+    "file": "game:recipes/grid/plaster/stripes.json",
+    "path": "/ingredients/W/code",
+    "value": "plank-aged"
+  }
+]

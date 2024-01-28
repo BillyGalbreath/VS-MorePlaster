@@ -1,15 +1,15 @@
 ﻿{
   "code": "plaster-square",
-  "class": "Block",
+  "behaviors": [
+    { "name": "MorePlaster.BlockName", "properties": { "name": "block-plaster-square", "material": "material-{material}" } }
+  ],
   "variantgroups": [
     { "code": "material", "states": ["acacia", "baldcypress", "birch", "ebony", "kapok", "larch", "maple", "oak", "pine", "purpleheart", "redwood", "walnut"] }
   ],
   "attributes": {
+    "mapColorCode": "settlement",
     "canChisel": true
   },
-  "behaviors": [
-    { "name": "MorePlaster.BlockName", "properties": { "name": "block-plaster-square", "material": "material-{material}" } }
-  ],
   "shape": { "base": "game:block/stone/plaster" },
   "blockmaterial": "Stone",
   "creativeinventory": { "general": ["*"], "construction": ["*"] },
@@ -17,7 +17,9 @@
   "resistance": 2.5,
   "lightAbsorption": 99,
   "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
   "heldTpUseAnimation": "twohandplaceblock",
+  "drawtype": "cube",
   "textures": {
     "all": { "base": "block/stone/plaster/square-{material}" }
   },

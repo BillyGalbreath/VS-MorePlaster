@@ -1,61 +1,75 @@
 ﻿{
   "code": "plaster",
-  "class": "Block",
-  "variantgroups": [
-    { "code": "type", "states": ["diagonal", "stripes"] },
-    { "code": "material", "states": ["acacia", "baldcypress", "birch", "ebony", "kapok", "larch", "maple", "oak", "pine", "purpleheart", "redwood", "walnut"] },
-    { "code": "rotation", "states": ["ud", "ns", "we"] }
-  ],
-  "attributes": {
-    "canChisel": true
-  },
   "behaviors": [
     { "name": "Pillar" },
     { "name": "WrenchOrientable", "properties": { "baseCode": "plaster-{type}-{material}-*" } },
-    { "name": "WrenchOrientable", "properties": { "baseCode": "plaster-{type}-{material}-*" } },
     { "name": "MorePlaster.BlockName", "properties": { "name": "block-plaster-{type}-*", "material": "material-{material}" } }
   ],
+  "variantgroups": [
+    { "code": "type", "states": ["diagonal", "stripes"] },
+    { "code": "material", "states": ["acacia", "baldcypress", "birch", "ebony", "kapok", "larch", "maple", "oak", "pine", "purpleheart", "redwood", "walnut"] },
+    { "code": "orientation", "states": ["ud", "ns", "we"] }
+  ],
+  "attributes": {
+    "mapColorCode": "settlement",
+    "canChisel": true
+  },
   "shapeByType": {
     "*-ud": { "base": "game:block/stone/plaster" },
     "*-ns": { "base": "game:block/stone/plaster", "rotateX": 90 },
     "*-we": { "base": "game:block/stone/plaster", "rotateZ": 90 }
   },
+  "drawtype": "cube",
   "blockmaterial": "Stone",
   "creativeinventory": { "general": ["*-ud"], "construction": ["*-ud"] },
   "replaceable": 200,
   "resistance": 2.5,
   "lightAbsorption": 99,
   "heldTpIdleAnimation": "holdbothhandslarge",
+  "heldRightReadyAnimation": "heldblockready",
   "heldTpUseAnimation": "twohandplaceblock",
   "dropsByType": {
-    "plaster-diagonal-acacia-*": [ { "type": "block", "code": "plaster-diagonal-acacia-ud" } ],
-    "plaster-diagonal-baldcypress-*": [ { "type": "block", "code": "plaster-diagonal-baldcypress-ud" } ],
-    "plaster-diagonal-birch-*": [ { "type": "block", "code": "plaster-diagonal-birch-ud" } ],
-    "plaster-diagonal-ebony-*": [ { "type": "block", "code": "plaster-diagonal-ebony-ud" } ],
-    "plaster-diagonal-kapok-*": [ { "type": "block", "code": "plaster-diagonal-kapok-ud" } ],
-    "plaster-diagonal-larch-*": [ { "type": "block", "code": "plaster-diagonal-larch-ud" } ],
-    "plaster-diagonal-maple-*": [ { "type": "block", "code": "plaster-diagonal-maple-ud" } ],
-    "plaster-diagonal-oak-*": [ { "type": "block", "code": "plaster-diagonal-oak-ud" } ],
-    "plaster-diagonal-pine-*": [ { "type": "block", "code": "plaster-diagonal-pine-ud" } ],
-    "plaster-diagonal-purpleheart-*": [ { "type": "block", "code": "plaster-diagonal-purpleheart-ud" } ],
-    "plaster-diagonal-redwood-*": [ { "type": "block", "code": "plaster-diagonal-redwood-ud" } ],
-    "plaster-diagonal-walnut-*": [ { "type": "block", "code": "plaster-diagonal-walnut-ud" } ],
-    "plaster-stripes-acacia-*": [ { "type": "block", "code": "plaster-stripes-acacia-ud" } ],
-    "plaster-stripes-baldcypress-*": [ { "type": "block", "code": "plaster-stripes-baldcypress-ud" } ],
-    "plaster-stripes-birch-*": [ { "type": "block", "code": "plaster-stripes-birch-ud" } ],
-    "plaster-stripes-ebony-*": [ { "type": "block", "code": "plaster-stripes-ebony-ud" } ],
-    "plaster-stripes-kapok-*": [ { "type": "block", "code": "plaster-stripes-kapok-ud" } ],
-    "plaster-stripes-larch-*": [ { "type": "block", "code": "plaster-stripes-larch-ud" } ],
-    "plaster-stripes-maple-*": [ { "type": "block", "code": "plaster-stripes-maple-ud" } ],
-    "plaster-stripes-oak-*": [ { "type": "block", "code": "plaster-stripes-oak-ud" } ],
-    "plaster-stripes-pine-*": [ { "type": "block", "code": "plaster-stripes-pine-ud" } ],
-    "plaster-stripes-purpleheart-*": [ { "type": "block", "code": "plaster-stripes-purpleheart-ud" } ],
-    "plaster-stripes-redwood-*": [ { "type": "block", "code": "plaster-stripes-redwood-ud" } ],
-    "plaster-stripes-walnut-*": [ { "type": "block", "code": "plaster-stripes-walnut-ud" } ]
+    "plaster-{type}-{material}-*": [ { "type": "block", "code": "plaster-{type}-{material}-ud" } ]
   },
-  "textures": {
-    "square": { "base": "block/stone/plaster/square-{material}" },
-    "type": { "base": "block/stone/plaster/{type}-{material}" }
+  "texturesByType": {
+    "plaster-stripes-*-ud": {
+      "all": { "base": "block/stone/plaster/stripes-{material}", "rotation": 0 },
+      "up": { "base": "block/stone/plaster/square-{material}", "rotation": 0 },
+      "down": { "base": "block/stone/plaster/square-{material}", "rotation": 0 }
+    },
+    "plaster-stripes-*-we": {
+      "all": { "base": "block/stone/plaster/{type}-{material}", "rotation": 90 },
+      "east" : { "base": "block/stone/plaster/square-{material}", "rotation": 0 },
+      "west" : { "base": "block/stone/plaster/square-{material}", "rotation": 0 }
+    },
+    "plaster-stripes-*-ns": {
+      "all": { "base": "block/stone/plaster/{type}-{material}", "rotation": 0 },
+      "north" : { "base": "block/stone/plaster/square-{material}", "rotation": 0 },
+      "south" : { "base": "block/stone/plaster/square-{material}", "rotation": 0 },
+      "east" : { "base": "block/stone/plaster/{type}-{material}", "rotation": 90 },
+      "west" : { "base": "block/stone/plaster/{type}-{material}", "rotation": 90 }
+    },
+    "plaster-diagonal-*-ud": {
+      "all": { "base": "block/stone/plaster/{type}-{material}", "rotation": 0 },
+      "up": { "base": "block/stone/plaster/square-{material}", "rotation": 0 },
+      "down": { "base": "block/stone/plaster/square-{material}", "rotation": 0 },
+      "north": { "base": "block/stone/plaster/{type}-{material}", "rotation": 90 },
+      "east": { "base": "block/stone/plaster/{type}-{material}", "rotation": 90 }
+    },
+    "plaster-diagonal-*-we": {
+      "all": { "base": "block/stone/plaster/{type}-{material}", "rotation": 90 },
+      "north": { "base": "block/stone/plaster/{type}-{material}", "rotation": 0 },
+      "down": { "base": "block/stone/plaster/{type}-{material}", "rotation": 180 },
+      "east": { "base": "block/stone/plaster/square-{material}", "rotation": 0 },
+      "west": { "base": "block/stone/plaster/square-{material}", "rotation": 0 }
+    },
+    "plaster-diagonal-*-ns": {
+      "all": { "base": "block/stone/plaster/{type}-{material}", "rotation": 0 },
+      "down": { "base": "block/stone/plaster/{type}-{material}", "rotation": 270 },
+      "north": { "base": "block/stone/plaster/square-{material}", "rotation": 0 },
+      "south": { "base": "block/stone/plaster/square-{material}", "rotation": 0 },
+      "west": { "base": "block/stone/plaster/{type}-{material}", "rotation": 90 }
+    }
   },
   "sounds": {
     "walk": "walk/stone"

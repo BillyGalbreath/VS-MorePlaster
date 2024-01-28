@@ -1,9 +1,0 @@
-﻿[
-  {
-    "op": "replace",
-    "side": "server",
-    "file": "game:recipes/grid/plaster/stripes.json",
-    "path": "/ingredients/W/code",
-    "value": "plank-aged"
-  }
-]

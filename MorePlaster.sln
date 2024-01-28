@@ -4,12 +4,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorePlaster", "MorePlaster.
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{76547194-B053-444C-959D-7BA9D987D156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76547194-B053-444C-959D-7BA9D987D156}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76547194-B053-444C-959D-7BA9D987D156}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76547194-B053-444C-959D-7BA9D987D156}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

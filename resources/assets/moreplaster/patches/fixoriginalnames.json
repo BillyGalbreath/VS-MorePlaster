@@ -2,6 +2,19 @@
   {
     "op": "add",
     "side": "server",
+    "file": "game:blocktypes/stone/plaster-fancy.json",
+    "path": "/behaviors/-",
+    "value": {
+      "name": "MorePlaster.BlockName",
+      "properties": {
+        "name": "block-plaster-{type}-*",
+        "material": "material-aged"
+      }
+    }
+  },
+  {
+    "op": "add",
+    "side": "server",
     "file": "game:blocktypes/stone/plaster-plain.json",
     "path": "/behaviorsByType",
     "value": {
