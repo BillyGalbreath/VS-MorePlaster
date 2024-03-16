@@ -1,16 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <PackageId>Pl3x.MorePlaster</PackageId>
-        <Title>MorePlaster</Title>
-        <Authors>BillyGalbreath</Authors>
-        <Company>Pl3x</Company>
-        <Description>Adds more plaster types based on the vanilla wood types</Description>
-        <Copyright>Copyright © 2024 William Blake Galbreath</Copyright>
-        <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        <PackageIcon>modicon.png</PackageIcon>
-        <RepositoryUrl>https://github.com/BillyGalbreath/VS-MorePlaster</RepositoryUrl>
-        <RepositoryType>git</RepositoryType>
         <TargetFramework>net7.0</TargetFramework>
         <EmbedAllSources>true</EmbedAllSources>
         <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
@@ -19,8 +9,9 @@
         <Nullable>enable</Nullable>
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-        <DebugType>pdbonly</DebugType>
+        <DebugType>embedded</DebugType>
         <DebugSymbols>true</DebugSymbols>
+        <ExcludeGeneratedDebugSymbol>false</ExcludeGeneratedDebugSymbol>
     </PropertyGroup>
 
     <ItemGroup>
@@ -67,15 +58,15 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="LICENSE" CopyToOutputDirectory="PreserveNewest"/>
+        <None Include="LICENSE" CopyToOutputDirectory="PreserveNewest" />
         <None Include="resources/**" CopyToOutputDirectory="PreserveNewest">
             <Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
         </None>
     </ItemGroup>
 
     <Target Name="Package" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'Release'">
-        <MakeDir Directories="bin/Mods"/>
-        <ZipDirectory DestinationFile="bin/Mods/$(TargetName).zip" SourceDirectory="$(TargetDir)" Overwrite="true"/>
+        <MakeDir Directories="bin/Mods" />
+        <ZipDirectory DestinationFile="bin/Mods/$(TargetName).zip" SourceDirectory="$(TargetDir)" Overwrite="true" />
     </Target>
 
 </Project>
